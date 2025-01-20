@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class Tree : MonoBehaviour
+{
+    public static Tree instance;
+    public int health = 10;
+    public bool gameOn = false;
+    public GameObject[] nutSpawn;
+    public float spawnCoolDown = 1;
+    public GameObject collectable;
+
+    void Awake(){
+        instance = this;
+        gameOn = true;
+    }
+
+    void Start(){
+        StartCoroutine(NutSpawning());
+    }
+
+    void Update()
+    {
+        if (health <= 0 && gameOn){
+            Lose();
+            gameOn = false;
+            Announcements.instance.Announce("You lost!", 10);
+        }
+    }
+
+    public void Lose(){
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        for (int i = 0; i < enemies.Length; i++){
+            Destroy(enemies[i]);
+        }
+        transform.Rotate(0, 0, 90);
+        transform.position = new Vector2(-5, -4.5f);
+    }
+
+    public IEnumerator NutSpawning(){
+        if (gameOn){
+        int randomPoint = Random.Range(0, nutSpawn.Length);
+        GameObject newCollectable = Instantiate(collectable);
+        newCollectable.transform.position = nutSpawn[randomPoint].transform.position;
+        yield return new WaitForSeconds(spawnCoolDown);
+        StartCoroutine(NutSpawning());
+        }
+    }
+}
