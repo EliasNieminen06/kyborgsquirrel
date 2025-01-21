@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c58d9badc04b424c9a8f38e1552187c
+guid: 037c9085d2b235048964c305f0620526
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8281041471812862562
-    second: nutofthegame_0
+      213: -4003284735312193408
+    second: squirrel_cyborg_sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nutofthegame_0
+      name: squirrel_cyborg_sprite_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 21
-        width: 22
-        height: 24
+        x: 1
+        y: 2
+        width: 61
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9df05ef7a4d31d80800000000000000
-      internalID: -8281041471812862562
+      spriteID: 08819f85eb97178c0800000000000000
+      internalID: -4003284735312193408
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nutofthegame_0: -8281041471812862562
+      squirrel_cyborg_sprite_0: -4003284735312193408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

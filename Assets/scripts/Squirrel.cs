@@ -13,6 +13,7 @@ public class Squirrel : MonoBehaviour
     public int nutLifeTime = 2;
     public float longClickTime;
     float clickTime;
+    public Animator anim;
 
     void Awake(){
         instance = this;
@@ -20,7 +21,7 @@ public class Squirrel : MonoBehaviour
 
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,6 +50,7 @@ public class Squirrel : MonoBehaviour
     }
 
     void ShortClick(){
+        anim.SetTrigger("throw");
         GameObject newNut = Instantiate(nut);
         newNut.transform.position = transform.position;
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -60,6 +62,7 @@ public class Squirrel : MonoBehaviour
     }
 
     void LongClick(){
+        anim.SetTrigger("throw");
         GameObject newNut = Instantiate(exNut);
         newNut.transform.position = transform.position;
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

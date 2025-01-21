@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c0cc096eceadd47f1801b3f18760172b
+guid: 8c58d9badc04b424c9a8f38e1552187c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7758666713738317709
-    second: fuckingtree_0
+      213: -8281041471812862562
+    second: nutofthegame_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fuckingtree_0
+      name: nutofthegame_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 8
-        width: 494
-        height: 352
+        x: 20
+        y: 21
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 370faf42bbda35490800000000000000
-      internalID: -7758666713738317709
+      spriteID: e9df05ef7a4d31d80800000000000000
+      internalID: -8281041471812862562
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fuckingtree_0: -7758666713738317709
+      nutofthegame_0: -8281041471812862562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
