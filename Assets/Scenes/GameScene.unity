@@ -1670,6 +1670,7 @@ GameObject:
   - component: {fileID: 2051929301}
   - component: {fileID: 2051929303}
   - component: {fileID: 2051929302}
+  - component: {fileID: 2051929304}
   m_Layer: 0
   m_Name: Tree
   m_TagString: tree
@@ -1770,6 +1771,28 @@ MonoBehaviour:
   - {fileID: 1262608813}
   spawnCoolDown: 2
   collectable: {fileID: 5707675704590814168, guid: 73d40d1be469a4542a4b6a9c88f21518, type: 3}
+--- !u!95 &2051929304
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051929300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f125728a3cb04a0488033cd86f39ac38, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7998924376877270873
 PrefabInstance:
   m_ObjectHideFlags: 0

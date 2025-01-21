@@ -49,6 +49,11 @@ public class Squirrel : MonoBehaviour
         if (nuts > 5) nuts = 5;
     }
 
+    public void Fall()
+    {
+        anim.SetTrigger("fall");
+    }
+
     void ShortClick(){
         anim.SetTrigger("throw");
         GameObject newNut = Instantiate(nut);

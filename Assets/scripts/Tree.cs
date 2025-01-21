@@ -14,8 +14,8 @@ public class Tree : MonoBehaviour
     public GameObject collectable;
 
     void Awake(){
-        instance = this;
         gameOn = true;
+        instance = this;
     }
 
     void Start(){
@@ -38,15 +38,14 @@ public class Tree : MonoBehaviour
         }
         transform.Rotate(0, 0, 90);
         transform.position = new Vector2(-5, -4.5f);
+        Squirrel.instance.Fall();
     }
 
     public IEnumerator NutSpawning(){
-        if (gameOn){
         int randomPoint = Random.Range(0, nutSpawn.Length);
         GameObject newCollectable = Instantiate(collectable);
         newCollectable.transform.position = nutSpawn[randomPoint].transform.position;
         yield return new WaitForSeconds(spawnCoolDown);
         StartCoroutine(NutSpawning());
-        }
     }
 }
