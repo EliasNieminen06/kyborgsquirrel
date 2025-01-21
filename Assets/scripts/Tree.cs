@@ -12,6 +12,7 @@ public class Tree : MonoBehaviour
     public GameObject[] nutSpawn;
     public float spawnCoolDown = 1;
     public GameObject collectable;
+    public GameObject endGameMenu;
 
     void Awake(){
         gameOn = true;
@@ -32,6 +33,7 @@ public class Tree : MonoBehaviour
     }
 
     public void Lose(){
+        StopCoroutine(EnemySpawner.instance.spawning());
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         for (int i = 0; i < enemies.Length; i++){
             Destroy(enemies[i]);
@@ -39,6 +41,10 @@ public class Tree : MonoBehaviour
         transform.Rotate(0, 0, 90);
         transform.position = new Vector2(-5, -4.5f);
         Squirrel.instance.Fall();
+        endGameMenu.SetActive(true);
+    }
+    public void Win(){
+        endGameMenu.SetActive(true);
     }
 
     public IEnumerator NutSpawning(){
@@ -46,6 +52,8 @@ public class Tree : MonoBehaviour
         GameObject newCollectable = Instantiate(collectable);
         newCollectable.transform.position = nutSpawn[randomPoint].transform.position;
         yield return new WaitForSeconds(spawnCoolDown);
-        StartCoroutine(NutSpawning());
+        if (gameOn){
+            StartCoroutine(NutSpawning());
+        }
     }
 }

@@ -25,25 +25,30 @@ public class EnemySpawner : MonoBehaviour
         if (Tree.instance.gameOn){
             for (int i = 0; i < rounds; i++){
                 currentRound = (i+1);
-                Announcements.instance.Announce("Round " + currentRound + " Started!", 3);
-                for (int u = 0; u < enemiesPerRound; u++){
+                if (Tree.instance.gameOn){
+                    Announcements.instance.Announce("Round " + currentRound + " Started!", 3);
+                    for (int u = 0; u < enemiesPerRound; u++){
+                        if (Tree.instance.gameOn){
+                            GameObject newEnemy = Instantiate(enemy);
+                            newEnemy.transform.position = spawner.position;
+                            yield return new WaitForSeconds(cooldown);
+                        }
+                        else break;
+                    }
                     if (Tree.instance.gameOn){
-                        GameObject newEnemy = Instantiate(enemy);
-                        newEnemy.transform.position = spawner.position;
-                        yield return new WaitForSeconds(cooldown);
+                        Announcements.instance.Announce("Boss incoming!", 3);
+                        GameObject newBoss = Instantiate(boss);
+                        newBoss.transform.position = spawner.position;
                     }
                     else break;
+                    yield return new WaitForSeconds(cooldown);
                 }
-                Announcements.instance.Announce("Boss incoming!", 3);
-                if (Tree.instance.gameOn){
-                    GameObject newBoss = Instantiate(boss);
-                    newBoss.transform.position = spawner.position;
-                }
-                else break;
-                yield return new WaitForSeconds(cooldown);
             }
-            Announcements.instance.Announce("You Won!", 10);
-            Tree.instance.gameOn = false;
+            if (Tree.instance.gameOn){
+                Announcements.instance.Announce("You Won!", 10);
+                Tree.instance.Win();
+                Tree.instance.gameOn = false;
+            }
         }
     }
 }

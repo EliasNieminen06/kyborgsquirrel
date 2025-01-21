@@ -45,7 +45,9 @@ public class Squirrel : MonoBehaviour
                     else Announcements.instance.Announce("Not enough nuts! (3 needed for explosive nut)", 3);
                 }
         }
-
+        if (Input.GetMouseButton(1) && Time.time - clickTime > longClickTime && nuts >= 3){
+            anim.SetTrigger("kyborg");
+        }
         if (nuts > 5) nuts = 5;
     }
 
@@ -67,7 +69,7 @@ public class Squirrel : MonoBehaviour
     }
 
     void LongClick(){
-        anim.SetTrigger("throw");
+        anim.SetTrigger("kyborgthrow");
         GameObject newNut = Instantiate(exNut);
         newNut.transform.position = transform.position;
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

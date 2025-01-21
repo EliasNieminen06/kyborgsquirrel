@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c58d9badc04b424c9a8f38e1552187c
+guid: 1ecdab2cf06344e7b9d503a86016c300
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8281041471812862562
-    second: nutofthegame_0
+      213: 5990922342141497001
+    second: bombnut_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,24 +109,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nutofthegame_0
+      name: bombnut_0
       rect:
         serializedVersion: 2
         x: 20
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9df05ef7a4d31d80800000000000000
-      internalID: -8281041471812862562
+      spriteID: 9ae8b400128042350800000000000000
+      internalID: 5990922342141497001
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nutofthegame_0: -8281041471812862562
+      bombnut_0: 5990922342141497001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
