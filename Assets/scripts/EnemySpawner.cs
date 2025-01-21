@@ -22,20 +22,20 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public IEnumerator spawning(){
-        if (Tree.instance.gameOn){
+        if (Treee.instance.gameOn){
             for (int i = 0; i < rounds; i++){
                 currentRound = (i+1);
-                if (Tree.instance.gameOn){
+                if (Treee.instance.gameOn){
                     Announcements.instance.Announce("Round " + currentRound + " Started!", 3);
                     for (int u = 0; u < enemiesPerRound; u++){
-                        if (Tree.instance.gameOn){
+                        if (Treee.instance.gameOn){
                             GameObject newEnemy = Instantiate(enemy);
                             newEnemy.transform.position = spawner.position;
                             yield return new WaitForSeconds(cooldown);
                         }
                         else break;
                     }
-                    if (Tree.instance.gameOn){
+                    if (Treee.instance.gameOn){
                         Announcements.instance.Announce("Boss incoming!", 3);
                         GameObject newBoss = Instantiate(boss);
                         newBoss.transform.position = spawner.position;
@@ -44,10 +44,10 @@ public class EnemySpawner : MonoBehaviour
                     yield return new WaitForSeconds(cooldown);
                 }
             }
-            if (Tree.instance.gameOn){
+            if (Treee.instance.gameOn){
                 Announcements.instance.Announce("You Won!", 10);
-                Tree.instance.Win();
-                Tree.instance.gameOn = false;
+                Treee.instance.Win();
+                Treee.instance.gameOn = false;
             }
         }
     }

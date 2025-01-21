@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -25,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("tree")){
-            other.GetComponent<Tree>().health -= damage;
+            other.GetComponent<Treee>().health -= damage;
             Destroy(gameObject);
         }
     }

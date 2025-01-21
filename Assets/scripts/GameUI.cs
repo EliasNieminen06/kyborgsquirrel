@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class UI : MonoBehaviour
+public class GameUI : MonoBehaviour
 {
     public TextMeshProUGUI nutsText;
     public TextMeshProUGUI healtgText;
@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
     void Start()
     {
         nutsText.text = "Nuts: " + Squirrel.instance.nuts.ToString();
-        healtgText.text = "Health: " + Tree.instance.health.ToString();
+        healtgText.text = "Health: " + Treee.instance.health.ToString();
         roundsText.text = "Round: " + EnemySpawner.instance.currentRound.ToString() + "/" + EnemySpawner.instance.rounds.ToString();
     }
 
@@ -18,7 +18,7 @@ public class UI : MonoBehaviour
     void Update()
     {
         nutsText.text = "Nuts: " + Squirrel.instance.nuts.ToString();
-        healtgText.text = "Health: " + Tree.instance.health.ToString();
+        healtgText.text = "Health: " + Treee.instance.health.ToString();
         roundsText.text = "Round: " + EnemySpawner.instance.currentRound.ToString() + "/" + EnemySpawner.instance.rounds.ToString();
     }
 }

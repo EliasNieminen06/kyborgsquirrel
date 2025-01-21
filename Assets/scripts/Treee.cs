@@ -4,9 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Tree : MonoBehaviour
+public class Treee : MonoBehaviour
 {
-    public static Tree instance;
+    public static Treee instance;
     public int health = 10;
     public bool gameOn = false;
     public GameObject[] nutSpawn;
@@ -29,6 +29,9 @@ public class Tree : MonoBehaviour
             Lose();
             gameOn = false;
             Announcements.instance.Announce("You lost!", 10);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
         }
     }
 
